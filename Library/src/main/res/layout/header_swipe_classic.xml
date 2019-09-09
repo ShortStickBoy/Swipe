@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sunzn.swipe.library.view.ClassicPullDownHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/refresh_header_height_55"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/tvRefresh"
+            android:background="@drawable/classic_arrow"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/tvRefresh"
+            android:background="@drawable/icon_success"
+            tools:ignore="ContentDescription" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/tvRefresh"
+            android:indeterminateDrawable="@drawable/ctx_progress" />
+
+        <TextView
+            android:id="@+id/tvRefresh"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="?attr/colorPrimary" />
+    </RelativeLayout>
+
+</com.sunzn.swipe.library.view.ClassicPullDownHeaderView>
