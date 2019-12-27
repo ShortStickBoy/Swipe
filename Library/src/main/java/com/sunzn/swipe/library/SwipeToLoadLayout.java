@@ -10,8 +10,6 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
-import androidx.core.view.MotionEventCompat;
-
 /**
  * Created by sunzn on 2016/5/30.
  */
@@ -435,8 +433,8 @@ public class SwipeToLoadLayout extends ViewGroup {
     }
 
     @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        final int action = MotionEventCompat.getActionMasked(ev);
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        final int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
@@ -449,16 +447,16 @@ public class SwipeToLoadLayout extends ViewGroup {
                 onActivePointerUp();
                 break;
         }
-        return super.dispatchTouchEvent(ev);
+        return super.dispatchTouchEvent(event);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
-        final int action = MotionEventCompat.getActionMasked(event);
+        final int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
 
-                mActivePointerId = MotionEventCompat.getPointerId(event, 0);
+                mActivePointerId = event.getPointerId(0);
                 mInitDownY = mLastY = getMotionEventY(event, mActivePointerId);
                 mInitDownX = mLastX = getMotionEventX(event, mActivePointerId);
 
