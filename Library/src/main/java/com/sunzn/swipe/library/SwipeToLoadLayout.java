@@ -499,7 +499,7 @@ public class SwipeToLoadLayout extends ViewGroup {
                 final float xInitDiff = x - mInitDownX;
                 mLastY = y;
                 mLastX = x;
-                boolean moved = Math.abs(yInitDiff) > Math.abs(xInitDiff);
+                boolean moved = Math.abs(yInitDiff) * 0.5f > Math.abs(xInitDiff);
                 boolean triggerCondition =
                         // refresh trigger condition
                         (yInitDiff > 0 && moved && onCheckCanRefresh()) ||
@@ -545,7 +545,7 @@ public class SwipeToLoadLayout extends ViewGroup {
                 mLastY = y;
                 mLastX = x;
 
-                if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > mTouchSlop) {
+                if (Math.abs(xDiff) * 0.5f > Math.abs(yDiff) && Math.abs(xDiff) > mTouchSlop) {
                     return false;
                 }
 
