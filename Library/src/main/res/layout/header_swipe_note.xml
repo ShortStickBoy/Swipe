@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sunzn.swipe.library.view.NoteRefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/refresh_header_height_80"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/llRefresh"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_note_diary"
+            android:scaleType="centerInside"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:transformPivotX="0dp"
+            android:transformPivotY="24dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivPen"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="-12dp"
+        android:layout_toEndOf="@id/llRefresh"
+        android:src="@drawable/icon_note_pen"
+        android:scaleType="centerInside"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:visibility="visible" />
+
+</com.sunzn.swipe.library.view.NoteRefreshHeaderView>
